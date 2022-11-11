@@ -1,0 +1,116 @@
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ echo 2 > file
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git diff
+warning: in the working copy of 'file', LF will be replaced by CRLF the next time Git touches it
+diff --git a/file b/file
+index fabfbb2..0cfbf08 100644
+--- a/file
++++ b/file
+@@ -1 +1 @@
+-hi hello
+\ No newline at end of file
++2
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git diff --staged
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git add .
+warning: in the working copy of 'file', LF will be replaced by CRLF the next time Git touches it
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git diff
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git diff --staged
+diff --git a/file b/file
+index fabfbb2..0cfbf08 100644
+--- a/file
++++ b/file
+@@ -1 +1 @@
+-hi hello
+\ No newline at end of file
++2
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ echo 3 > file
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git diff
+warning: in the working copy of 'file', LF will be replaced by CRLF the next time Git touches it
+diff --git a/file b/file
+index 0cfbf08..00750ed 100644
+--- a/file
++++ b/file
+@@ -1 +1 @@
+-2
++3
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git diff --staged
+diff --git a/file b/file
+index fabfbb2..0cfbf08 100644
+--- a/file
++++ b/file
+@@ -1 +1 @@
+-hi hello
+\ No newline at end of file
++2
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file
+
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git restore --staged file
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git add .
+warning: in the working copy of 'file', LF will be replaced by CRLF the next time Git touches it
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git commit -m"basic staging line 15"
+[master 35e154d] basic staging line 15
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ echo 4 > file
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git restore file
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
