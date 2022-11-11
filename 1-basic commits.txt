@@ -1,0 +1,110 @@
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ touch file
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file
+
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git commit -m"basic commits line 7"
+[master (root-commit) b148332] basic commits line 7
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file
+
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git commit -m"basic commits line 14"
+[master 9c47633] basic commits line 14
+ 1 file changed, 1 insertion(+)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git log
+commit 9c476338faf68cdb780a39b767d827485cbefc83 (HEAD -> master)
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Fri Nov 11 13:38:54 2022 +0530
+
+    basic commits line 14
+
+commit b14833233992d3d9acbe881c83f84d3711b3d449
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Fri Nov 11 13:36:54 2022 +0530
+
+    basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/intern (master)
+$ git commit -m"basic commits line 16"
+[master b13cf7a] basic commits line 16
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
