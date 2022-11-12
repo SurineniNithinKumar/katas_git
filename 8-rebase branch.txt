@@ -1,0 +1,145 @@
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git branch
+  greeting
+* master
+  my
+  temp1
+  temp2
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph
+*   37e77f4 (HEAD -> master, temp2) done merging
+|\
+| * dbb7cc1 (temp1) 7th kata 1
+* | ccad72c 7th kata 2
+|/
+* a2db734 example for merge conflict
+*   1d0e989 Merge branch 'greeting'
+|\
+| * 0c8e7a3 (greeting) 3 way merge 4
+* | 3eb14e6 3 way merge 7
+|/
+* 65571f0 fast forward merge 5
+* 2b2670e basic branching 14
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline
+37e77f4 (HEAD -> master, temp2) done merging
+ccad72c 7th kata 2
+dbb7cc1 (temp1) 7th kata 1
+a2db734 example for merge conflict
+1d0e989 Merge branch 'greeting'
+3eb14e6 3 way merge 7
+0c8e7a3 (greeting) 3 way merge 4
+65571f0 fast forward merge 5
+2b2670e basic branching 14
+35e154d basic staging line 15
+b13cf7a basic commits line 16
+9c47633 basic commits line 14
+b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git switch greeting
+Switched to branch 'greeting'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (greeting)
+$ git log --oneline
+0c8e7a3 (HEAD -> greeting) 3 way merge 4
+65571f0 fast forward merge 5
+2b2670e basic branching 14
+35e154d basic staging line 15
+b13cf7a basic commits line 16
+9c47633 basic commits line 14
+b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (greeting)
+$ git rebase master
+Successfully rebased and updated refs/heads/greeting.
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (greeting)
+$ git log --oneline
+37e77f4 (HEAD -> greeting, temp2, master) done merging
+ccad72c 7th kata 2
+dbb7cc1 (temp1) 7th kata 1
+a2db734 example for merge conflict
+1d0e989 Merge branch 'greeting'
+3eb14e6 3 way merge 7
+0c8e7a3 3 way merge 4
+65571f0 fast forward merge 5
+2b2670e basic branching 14
+35e154d basic staging line 15
+b13cf7a basic commits line 16
+9c47633 basic commits line 14
+b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (greeting)
+$ git switch master
+Switched to branch 'master'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph
+*   37e77f4 (HEAD -> master, temp2, greeting) done merging
+|\
+| * dbb7cc1 (temp1) 7th kata 1
+* | ccad72c 7th kata 2
+|/
+* a2db734 example for merge conflict
+*   1d0e989 Merge branch 'greeting'
+|\
+| * 0c8e7a3 3 way merge 4
+* | 3eb14e6 3 way merge 7
+|/
+* 65571f0 fast forward merge 5
+* 2b2670e basic branching 14
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph --all
+*   37e77f4 (HEAD -> master, temp2, greeting) done merging
+|\
+| * dbb7cc1 (temp1) 7th kata 1
+* | ccad72c 7th kata 2
+|/
+* a2db734 example for merge conflict
+*   1d0e989 Merge branch 'greeting'
+|\
+| * 0c8e7a3 3 way merge 4
+* | 3eb14e6 3 way merge 7
+|/
+* 65571f0 fast forward merge 5
+* 2b2670e basic branching 14
+| * e23c306 (my) basic branching 10
+|/
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git merge greeting
+Already up to date.
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline
+37e77f4 (HEAD -> master, temp2, greeting) done merging
+ccad72c 7th kata 2
+dbb7cc1 (temp1) 7th kata 1
+a2db734 example for merge conflict
+1d0e989 Merge branch 'greeting'
+3eb14e6 3 way merge 7
+0c8e7a3 3 way merge 4
+65571f0 fast forward merge 5
+2b2670e basic branching 14
+35e154d basic staging line 15
+b13cf7a basic commits line 16
+9c47633 basic commits line 14
+b148332 basic commits line 7
+
