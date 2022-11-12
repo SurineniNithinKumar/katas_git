@@ -1,0 +1,92 @@
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git branch feat
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git switch feat
+Switched to branch 'feat'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (feat)
+$ git status
+On branch feat
+nothing to commit, working tree clean
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (feat)
+$ echo "Good Morning" > grt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (feat)
+$ git add .
+warning: in the working copy of 'grt', LF will be replaced by CRLF the next time Git touches it
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (feat)
+$ git commit -m"fast forward merge 5"
+[feat 65571f0] fast forward merge 5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 grt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (feat)
+$ git log --oneline --graph --all
+* 65571f0 (HEAD -> feat) fast forward merge 5
+* 2b2670e (master) basic branching 14
+| * e23c306 (my) basic branching 10
+|/
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (feat)
+$ git switch master
+Switched to branch 'master'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ cat grt
+cat: grt: No such file or directory
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git diff master feat
+diff --git a/grt b/grt
+new file mode 100644
+index 0000000..7fd5231
+--- /dev/null
++++ b/grt
+@@ -0,0 +1 @@
++Good Morning
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git merge feat
+Updating 2b2670e..65571f0
+Fast-forward
+ grt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 grt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ cat grt
+Good Morning
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph --all
+* 65571f0 (HEAD -> master, feat) fast forward merge 5
+* 2b2670e basic branching 14
+| * e23c306 (my) basic branching 10
+|/
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git branch --delete feat
+Deleted branch feat (was 65571f0).
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph --all
+* 65571f0 (HEAD -> master) fast forward merge 5
+* 2b2670e basic branching 14
+| * e23c306 (my) basic branching 10
+|/
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
