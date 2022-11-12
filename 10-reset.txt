@@ -1,0 +1,272 @@
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ ls
+README.md  file.txt  file1  file2.txt  fo.s  foo.s  grt.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git log
+commit 885942e8af6d5c9b30a841f2a81c99d79ab7111a (HEAD -> master)
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 16:32:09 2022 +0530
+
+    Revert "Revert "grt update""
+
+    This reverts commit 2ed5f6a4a5f5edecd8adefe94a0c8aa4f5ec7454.
+
+commit 2ed5f6a4a5f5edecd8adefe94a0c8aa4f5ec7454
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 15:58:41 2022 +0530
+
+    Revert "grt update"
+
+    This reverts commit d61ae834d9b49f7ff8a1c31c78ca70095a52a1f0.
+
+commit d61ae834d9b49f7ff8a1c31c78ca70095a52a1f0
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 15:56:41 2022 +0530
+
+    grt update
+
+commit 57c9229c0ddeb4e8e7efdeb407ccd85cdf337ba6
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 15:53:53 2022 +0530
+
+    ignore
+
+commit 55eedfa02921239ca6544eb7e0a97727a9f8a06c (grt)
+Merge: aff907a de1a37d
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Thu Nov 10 22:40:55 2022 +0530
+
+    Merge branch 'grt'
+
+commit aff907a04e180ebaffb43cef876931a4fc8c8fd2
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Thu Nov 10 22:37:44 2022 +0530
+
+    kata 5.readme
+
+commit de1a37d2decb29796c1030cac2e2720cca052a67
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Thu Nov 10 22:36:35 2022 +0530
+
+    kata 5
+
+commit 27ca86d5cf4876e0cd49449e581d7507bb45adac
+Merge: ad038dc 9af63a4
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ ls
+README.md  file.txt  file1  file2.txt  fo.s  foo.s  grt.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git log --oneline
+885942e (HEAD -> master) Revert "Revert "grt update""
+2ed5f6a Revert "grt update"
+d61ae83 grt update
+57c9229 ignore
+55eedfa (grt) Merge branch 'grt'
+aff907a kata 5.readme
+de1a37d kata 5
+27ca86d Merge branch 'feat'
+9af63a4 kata 4
+ad038dc kata 3.1
+cc4c77e (my) kata 3
+25f9c1d kat 2
+d96c5db kat 1.1
+1f4f4c9 kat 1.1
+4173f4d kat 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git reset --soft HEAD~1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ ls
+README.md  file.txt  file1  file2.txt  fo.s  foo.s  grt.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git log --oneline
+2ed5f6a (HEAD -> master) Revert "grt update"
+d61ae83 grt update
+57c9229 ignore
+55eedfa (grt) Merge branch 'grt'
+aff907a kata 5.readme
+de1a37d kata 5
+27ca86d Merge branch 'feat'
+9af63a4 kata 4
+ad038dc kata 3.1
+cc4c77e (my) kata 3
+25f9c1d kat 2
+d96c5db kat 1.1
+1f4f4c9 kat 1.1
+4173f4d kat 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   grt.txt
+
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git reset --mixed HEAD~1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git log --oneline
+d61ae83 (HEAD -> master) grt update
+57c9229 ignore
+55eedfa (grt) Merge branch 'grt'
+aff907a kata 5.readme
+de1a37d kata 5
+27ca86d Merge branch 'feat'
+9af63a4 kata 4
+ad038dc kata 3.1
+cc4c77e (my) kata 3
+25f9c1d kat 2
+d96c5db kat 1.1
+1f4f4c9 kat 1.1
+4173f4d kat 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git reset --hard HEAD~1
+HEAD is now at 57c9229 ignore
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ ls
+README.md  file.txt  file1  file2.txt  fo.s  foo.s  grt.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ cat grt
+cat: grt: No such file or directory
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ cat grt.txt
+HELLO
+good morning
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git log --oneline
+57c9229 (HEAD -> master) ignore
+55eedfa (grt) Merge branch 'grt'
+aff907a kata 5.readme
+de1a37d kata 5
+27ca86d Merge branch 'feat'
+9af63a4 kata 4
+ad038dc kata 3.1
+cc4c77e (my) kata 3
+25f9c1d kat 2
+d96c5db kat 1.1
+1f4f4c9 kat 1.1
+4173f4d kat 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git revert HEAD~1
+error: commit 55eedfa02921239ca6544eb7e0a97727a9f8a06c is a merge but no -m option was given.
+fatal: revert failed
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ ^C
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git log
+commit 57c9229c0ddeb4e8e7efdeb407ccd85cdf337ba6 (HEAD -> master)
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 15:53:53 2022 +0530
+
+    ignore
+
+commit 55eedfa02921239ca6544eb7e0a97727a9f8a06c (grt)
+Merge: aff907a de1a37d
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Thu Nov 10 22:40:55 2022 +0530
+
+    Merge branch 'grt'
+
+commit aff907a04e180ebaffb43cef876931a4fc8c8fd2
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Thu Nov 10 22:37:44 2022 +0530
+
+    kata 5.readme
+
+commit de1a37d2decb29796c1030cac2e2720cca052a67
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Thu Nov 10 22:36:35 2022 +0530
+
+    kata 5
+
+commit 27ca86d5cf4876e0cd49449e581d7507bb45adac
+Merge: ad038dc 9af63a4
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Thu Nov 10 22:30:45 2022 +0530
+
+    Merge branch 'feat'
+
+commit 9af63a4d25a58d2885f9720977519104b7207ec3
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Thu Nov 10 22:24:35 2022 +0530
+
+    kata 4
+
+commit ad038dc1e6e5916ab4296a52af89c3ade59fdbde
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Thu Nov 10 22:17:55 2022 +0530
+
+    kata 3.1
+
+commit cc4c77ed9d2b3307379f553f33bb90c4ef0afada (my)
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Thu Nov 10 22:16:07 2022 +0530
+
+    kata 3
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git log --oneline
+57c9229 (HEAD -> master) ignore
+55eedfa (grt) Merge branch 'grt'
+aff907a kata 5.readme
+de1a37d kata 5
+27ca86d Merge branch 'feat'
+9af63a4 kata 4
+ad038dc kata 3.1
+cc4c77e (my) kata 3
+25f9c1d kat 2
+d96c5db kat 1.1
+1f4f4c9 kat 1.1
+4173f4d kat 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git revert HEAD~1
+error: commit 55eedfa02921239ca6544eb7e0a97727a9f8a06c is a merge but no -m option was given.
+fatal: revert failed
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git revert HEAD~1 -m 1
+hint: Waiting for your editor to close the file... unix2dos: converting file C:/Users/rajesh/Desktop/tuna/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file C:/Users/rajesh/Desktop/tuna/.git/COMMIT_EDITMSG to Unix format...
+[master f87d5e7] Revert "Merge branch 'grt'"
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git log --oneline
+f87d5e7 (HEAD -> master) Revert "Merge branch 'grt'"
+57c9229 ignore
+55eedfa (grt) Merge branch 'grt'
+aff907a kata 5.readme
+de1a37d kata 5
+27ca86d Merge branch 'feat'
+9af63a4 kata 4
+ad038dc kata 3.1
+cc4c77e (my) kata 3
+25f9c1d kat 2
+d96c5db kat 1.1
+1f4f4c9 kat 1.1
+4173f4d kat 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ ls
+README.md  file.txt  file1  file2.txt  fo.s  foo.s  grt.txt
