@@ -1,0 +1,123 @@
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ touch hey.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ ls
+README.md  file.txt  file1  file2.txt  fo.s  foo.s  grt.txt  hey.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git clean -n
+Would remove hey.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git clean
+fatal: clean.requireForce defaults to true and neither -i, -n, nor -f given; refusing to clean
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git clean -n
+Would remove hey.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git clean -n
+Would remove hey.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git clean -n
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git clean -n -d
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git clean -f -d
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git clean -n
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hey.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hey.txt
+
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git clean -n
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git clean -n
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hey.txt
+
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hey.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hey.txt
+
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git clean -n
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hey.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hey.txt
+
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ ls
+README.md  file.txt  file1  file2.txt  fo.s  foo.s  grt.txt  hey.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git clean -f -n
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git rm hey
+fatal: pathspec 'hey' did not match any files
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git rm hey.txt
+error: the following file has staged content different from both the
+file and the HEAD:
+    hey.txt
+(use -f to force removal)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git rm -f hey.txt
+rm 'hey.txt'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
