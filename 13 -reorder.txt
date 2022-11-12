@@ -1,0 +1,133 @@
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git log --oneline --graph
+* 4d7ce7c (HEAD -> master) again used git commit --amend
+* f87d5e7 Revert "Merge branch 'grt'"
+* 57c9229 ignore
+*   55eedfa (grt) Merge branch 'grt'
+|\
+| * de1a37d kata 5
+* | aff907a kata 5.readme
+|/
+*   27ca86d Merge branch 'feat'
+|\
+| * 9af63a4 kata 4
+| * cc4c77e (my) kata 3
+* | ad038dc kata 3.1
+|/
+* 25f9c1d kat 2
+* d96c5db kat 1.1
+* 1f4f4c9 kat 1.1
+* 4173f4d kat 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git reflog
+4d7ce7c (HEAD -> master) HEAD@{0}: commit (amend): again used git commit --amend
+8aa2069 HEAD@{1}: commit (amend): used git commit --amend
+8d4db12 HEAD@{2}: commit: amend
+f87d5e7 HEAD@{3}: revert: Revert "Merge branch 'grt'"
+57c9229 HEAD@{4}: reset: moving to HEAD~1
+d61ae83 HEAD@{5}: reset: moving to HEAD~1
+2ed5f6a HEAD@{6}: reset: moving to HEAD~1
+885942e HEAD@{7}: revert: Revert "Revert "grt update""
+2ed5f6a HEAD@{8}: revert: Revert "grt update"
+d61ae83 HEAD@{9}: commit: grt update
+57c9229 HEAD@{10}: commit: ignore
+55eedfa (grt) HEAD@{11}: checkout: moving from grt to master
+55eedfa (grt) HEAD@{12}: rebase (finish): returning to refs/heads/grt
+55eedfa (grt) HEAD@{13}: rebase (start): checkout master
+de1a37d HEAD@{14}: checkout: moving from master to grt
+55eedfa (grt) HEAD@{15}: merge grt: Merge made by the 'ort' strategy.
+aff907a HEAD@{16}: commit: kata 5.readme
+27ca86d HEAD@{17}: checkout: moving from grt to master
+de1a37d HEAD@{18}: commit: kata 5
+27ca86d HEAD@{19}: checkout: moving from master to grt
+27ca86d HEAD@{20}: merge feat: Merge made by the 'ort' strategy.
+ad038dc HEAD@{21}: checkout: moving from feat to master
+9af63a4 HEAD@{22}: commit: kata 4
+cc4c77e (my) HEAD@{23}: checkout: moving from my to feat
+cc4c77e (my) HEAD@{24}: checkout: moving from master to my
+ad038dc HEAD@{25}: checkout: moving from my to master
+cc4c77e (my) HEAD@{26}: checkout: moving from master to my
+ad038dc HEAD@{27}: checkout: moving from my to master
+cc4c77e (my) HEAD@{28}: checkout: moving from master to my
+ad038dc HEAD@{29}: commit: kata 3.1
+25f9c1d HEAD@{30}: checkout: moving from my to master
+cc4c77e (my) HEAD@{31}: commit: kata 3
+25f9c1d HEAD@{32}: checkout: moving from master to my
+25f9c1d HEAD@{33}: commit: kat 2
+d96c5db HEAD@{34}: commit: kat 1.1
+1f4f4c9 HEAD@{35}: commit: kat 1.1
+4173f4d HEAD@{36}: commit (initial): kat 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git rebase -i 57c9229
+hint: Waiting for your editor to close the file... unix2dos: converting file C:/Users/rajesh/Desktop/tuna/.git/rebase-merge/git-rebase-todo to DOS format...
+dos2unix: converting file C:/Users/rajesh/Desktop/tuna/.git/rebase-merge/git-rebase-todo to Unix format...
+Successfully rebased and updated refs/heads/master.
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git log --oneline --graph
+* bd12c1f (HEAD -> master) Revert "Merge branch 'grt'"
+* 4f562d2 again used git commit --amend
+* 57c9229 ignore
+*   55eedfa (grt) Merge branch 'grt'
+|\
+| * de1a37d kata 5
+* | aff907a kata 5.readme
+|/
+*   27ca86d Merge branch 'feat'
+|\
+| * 9af63a4 kata 4
+| * cc4c77e (my) kata 3
+* | ad038dc kata 3.1
+|/
+* 25f9c1d kat 2
+* d96c5db kat 1.1
+* 1f4f4c9 kat 1.1
+* 4173f4d kat 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git reflog
+bd12c1f (HEAD -> master) HEAD@{0}: rebase (finish): returning to refs/heads/master
+bd12c1f (HEAD -> master) HEAD@{1}: rebase (pick): Revert "Merge branch 'grt'"
+4f562d2 HEAD@{2}: rebase (pick): again used git commit --amend
+57c9229 HEAD@{3}: rebase (start): checkout 57c9229
+4d7ce7c HEAD@{4}: commit (amend): again used git commit --amend
+8aa2069 HEAD@{5}: commit (amend): used git commit --amend
+8d4db12 HEAD@{6}: commit: amend
+f87d5e7 HEAD@{7}: revert: Revert "Merge branch 'grt'"
+57c9229 HEAD@{8}: reset: moving to HEAD~1
+d61ae83 HEAD@{9}: reset: moving to HEAD~1
+2ed5f6a HEAD@{10}: reset: moving to HEAD~1
+885942e HEAD@{11}: revert: Revert "Revert "grt update""
+2ed5f6a HEAD@{12}: revert: Revert "grt update"
+d61ae83 HEAD@{13}: commit: grt update
+57c9229 HEAD@{14}: commit: ignore
+55eedfa (grt) HEAD@{15}: checkout: moving from grt to master
+55eedfa (grt) HEAD@{16}: rebase (finish): returning to refs/heads/grt
+55eedfa (grt) HEAD@{17}: rebase (start): checkout master
+de1a37d HEAD@{18}: checkout: moving from master to grt
+55eedfa (grt) HEAD@{19}: merge grt: Merge made by the 'ort' strategy.
+aff907a HEAD@{20}: commit: kata 5.readme
+27ca86d HEAD@{21}: checkout: moving from grt to master
+de1a37d HEAD@{22}: commit: kata 5
+27ca86d HEAD@{23}: checkout: moving from master to grt
+27ca86d HEAD@{24}: merge feat: Merge made by the 'ort' strategy.
+ad038dc HEAD@{25}: checkout: moving from feat to master
+9af63a4 HEAD@{26}: commit: kata 4
+cc4c77e (my) HEAD@{27}: checkout: moving from my to feat
+cc4c77e (my) HEAD@{28}: checkout: moving from master to my
+ad038dc HEAD@{29}: checkout: moving from my to master
+cc4c77e (my) HEAD@{30}: checkout: moving from master to my
+ad038dc HEAD@{31}: checkout: moving from my to master
+cc4c77e (my) HEAD@{32}: checkout: moving from master to my
+ad038dc HEAD@{33}: commit: kata 3.1
+25f9c1d HEAD@{34}: checkout: moving from my to master
+cc4c77e (my) HEAD@{35}: commit: kata 3
+25f9c1d HEAD@{36}: checkout: moving from master to my
+25f9c1d HEAD@{37}: commit: kat 2
+d96c5db HEAD@{38}: commit: kat 1.1
+1f4f4c9 HEAD@{39}: commit: kat 1.1
+4173f4d HEAD@{40}: commit (initial): kat 1
+
