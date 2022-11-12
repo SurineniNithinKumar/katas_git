@@ -1,0 +1,88 @@
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ ls
+README.md  contents  file  file2  grt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git branch t1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git branch t2
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git switch t1
+Switched to branch 't1'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (t1)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (t1)
+$ git commit -m"ex 1"
+[t1 37e8042] ex 1
+ 1 file changed, 2 insertions(+)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (t1)
+$ git switch t2
+Switched to branch 't2'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (t2)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (t2)
+$ git commit -m"ex 2"
+[t2 15bbe1d] ex 2
+ 1 file changed, 2 insertions(+)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (t2)
+$ git merge t1
+Auto-merging contents
+CONFLICT (content): Merge conflict in contents
+Automatic merge failed; fix conflicts and then commit the result.
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (t2|MERGING)
+$ git status
+On branch t2
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   contents
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (t2|MERGING)
+$ git status
+On branch t2
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   contents
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (t2|MERGING)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (t2|MERGING)
+$ git status
+On branch t2
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   contents
+
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (t2|MERGING)
+$ git commit -m"merge conflict resolved"
+[t2 917bf3d] merge conflict resolved
+
+
+
+
+
