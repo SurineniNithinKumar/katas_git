@@ -1,0 +1,193 @@
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git log -p
+commit f87d5e7ddd433f40b557e275291c95850a486947 (HEAD -> master)
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 17:47:33 2022 +0530
+
+    Revert "Merge branch 'grt'"
+
+    This reverts commit 55eedfa02921239ca6544eb7e0a97727a9f8a06c, reversing
+    changes made to aff907a04e180ebaffb43cef876931a4fc8c8fd2.
+
+diff --git a/grt.txt b/grt.txt
+index b861e9b..d9605cb 100644
+--- a/grt.txt
++++ b/grt.txt
+@@ -1,2 +1 @@
+-HELLO
+-good morning
+\ No newline at end of file
++HELLO
+\ No newline at end of file
+
+commit 57c9229c0ddeb4e8e7efdeb407ccd85cdf337ba6
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 15:53:53 2022 +0530
+
+    ignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..a4104e6
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++*.s
+\ No newline at end of file
+
+commit 55eedfa02921239ca6544eb7e0a97727a9f8a06c (grt)
+Merge: aff907a de1a37d
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Thu Nov 10 22:40:55 2022 +0530
+
+    Merge branch 'grt'
+
+commit aff907a04e180ebaffb43cef876931a4fc8c8fd2
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Thu Nov 10 22:37:44 2022 +0530
+
+    kata 5.readme
+
+diff --git a/README.md b/README.md
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ echo 2 > add.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git add .
+warning: in the working copy of 'add.txt', LF will be replaced by CRLF the next time Git touches it
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git commit -m"amend"
+[master 8d4db12] amend
+ 1 file changed, 1 insertion(+)
+ create mode 100644 add.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git commit --amend
+hint: Waiting for your editor to close the file... unix2dos: converting file C:/Users/rajesh/Desktop/tuna/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file C:/Users/rajesh/Desktop/tuna/.git/COMMIT_EDITMSG to Unix format...
+[master 8aa2069]  used git commit --amend
+ Date: Sat Nov 12 20:32:13 2022 +0530
+ 1 file changed, 1 insertion(+)
+ create mode 100644 add.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git log -p
+commit 8aa206970c2d2970d0ebce4a2b967420e4edef0f (HEAD -> master)
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 20:32:13 2022 +0530
+
+     used git commit --amend
+
+diff --git a/add.txt b/add.txt
+new file mode 100644
+index 0000000..0cfbf08
+--- /dev/null
++++ b/add.txt
+@@ -0,0 +1 @@
++2
+
+commit f87d5e7ddd433f40b557e275291c95850a486947
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 17:47:33 2022 +0530
+
+    Revert "Merge branch 'grt'"
+
+    This reverts commit 55eedfa02921239ca6544eb7e0a97727a9f8a06c, reversing
+    changes made to aff907a04e180ebaffb43cef876931a4fc8c8fd2.
+
+diff --git a/grt.txt b/grt.txt
+index b861e9b..d9605cb 100644
+--- a/grt.txt
++++ b/grt.txt
+@@ -1,2 +1 @@
+-HELLO
+-good morning
+\ No newline at end of file
++HELLO
+\ No newline at end of file
+
+commit 57c9229c0ddeb4e8e7efdeb407ccd85cdf337ba6
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 15:53:53 2022 +0530
+
+    ignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..a4104e6
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++*.s
+\ No newline at end of file
+
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git commit --amend
+hint: Waiting for your editor to close the file... unix2dos: converting file C:/Users/rajesh/Desktop/tuna/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file C:/Users/rajesh/Desktop/tuna/.git/COMMIT_EDITMSG to Unix format...
+[master 4d7ce7c] again used git commit --amend
+ Date: Sat Nov 12 20:32:13 2022 +0530
+ 1 file changed, 1 insertion(+)
+ create mode 100644 add.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git log -p
+commit 4d7ce7cdde4903f392711d9232c8af4f8da91e92 (HEAD -> master)
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 20:32:13 2022 +0530
+
+    again used git commit --amend
+
+diff --git a/add.txt b/add.txt
+new file mode 100644
+index 0000000..0cfbf08
+--- /dev/null
++++ b/add.txt
+@@ -0,0 +1 @@
++2
+
+commit f87d5e7ddd433f40b557e275291c95850a486947
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 17:47:33 2022 +0530
+
+    Revert "Merge branch 'grt'"
+
+    This reverts commit 55eedfa02921239ca6544eb7e0a97727a9f8a06c, reversing
+    changes made to aff907a04e180ebaffb43cef876931a4fc8c8fd2.
+
+diff --git a/grt.txt b/grt.txt
+index b861e9b..d9605cb 100644
+--- a/grt.txt
++++ b/grt.txt
+@@ -1,2 +1 @@
+-HELLO
+-good morning
+\ No newline at end of file
++HELLO
+\ No newline at end of file
+
+commit 57c9229c0ddeb4e8e7efdeb407ccd85cdf337ba6
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 15:53:53 2022 +0530
+
+    ignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..a4104e6
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++*.s
+\ No newline at end of file
+
+
