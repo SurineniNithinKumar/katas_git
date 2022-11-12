@@ -1,0 +1,92 @@
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git branch greeting
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git switch greeting
+Switched to branch 'greeting'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (greeting)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (greeting)
+$ git commit -m"3 way merge 4"
+[greeting 0c8e7a3] 3 way merge 4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (greeting)
+$ git log --oneline --graph --all
+* 0c8e7a3 (HEAD -> greeting) 3 way merge 4
+* 65571f0 (master) fast forward merge 5
+* 2b2670e basic branching 14
+| * e23c306 (my) basic branching 10
+|/
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (greeting)
+$ git switch master
+Switched to branch 'master'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph --all
+* 0c8e7a3 (greeting) 3 way merge 4
+* 65571f0 (HEAD -> master) fast forward merge 5
+* 2b2670e basic branching 14
+| * e23c306 (my) basic branching 10
+|/
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ touch README.md
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git commit -m"3 way merge 7"
+[master 3eb14e6] 3 way merge 7
+ 1 file changed, 7 insertions(+)
+ create mode 100644 README.md
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph --all
+* 3eb14e6 (HEAD -> master) 3 way merge 7
+| * 0c8e7a3 (greeting) 3 way merge 4
+|/
+* 65571f0 fast forward merge 5
+* 2b2670e basic branching 14
+| * e23c306 (my) basic branching 10
+|/
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git merge greeting
+hint: Waiting for your editor to close the file... unix2dos: converting file C:/Users/rajesh/Desktop/intern/.git/MERGE_MSG to DOS format...
+dos2unix: converting file C:/Users/rajesh/Desktop/intern/.git/MERGE_MSG to Unix format...
+Merge made by the 'ort' strategy.
+ grt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph --all
+*   1d0e989 (HEAD -> master) Merge branch 'greeting'
+|\
+| * 0c8e7a3 (greeting) 3 way merge 4
+* | 3eb14e6 3 way merge 7
+|/
+* 65571f0 fast forward merge 5
+* 2b2670e basic branching 14
+| * e23c306 (my) basic branching 10
+|/
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
