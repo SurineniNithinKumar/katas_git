@@ -1,0 +1,98 @@
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git branch
+* master
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git branch my
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git switch my
+Switched to branch 'my'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (my)
+$ git branch
+  master
+* my
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (my)
+$ git status
+On branch my
+nothing to commit, working tree clean
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (my)
+$ touchh file1
+bash: touchh: command not found
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (my)
+$ touch file1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (my)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (my)
+$ git commit -m"basic branching 10"
+[my d4349d1] basic branching 10
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (my)
+$ git log --oneline --graph
+* d4349d1 (HEAD -> my) basic branching 10
+* 35e154d (master) basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (my)
+$ git switch master
+Switched to branch 'master'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph
+* 35e154d (HEAD -> master) basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ touch file2
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git commit -m"basic branching 14"
+[master a5dd310] basic branching 14
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph
+* a5dd310 (HEAD -> master) basic branching 14
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git switch my
+Switched to branch 'my'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (my)
+$ git diff master my
+diff --git a/file1 b/file1
+new file mode 100644
+index 0000000..1d8490d
+--- /dev/null
++++ b/file1
+@@ -0,0 +1 @@
++nithin
+\ No newline at end of file
+diff --git a/file2 b/file2
+deleted file mode 100644
+index 01c207b..0000000
+--- a/file2
++++ /dev/null
+@@ -1 +0,0 @@
+-master file2
+\ No newline at end of file
