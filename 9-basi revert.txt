@@ -1,0 +1,132 @@
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git log --oneline
+d61ae83 (HEAD -> master) grt update
+57c9229 ignore
+55eedfa (grt) Merge branch 'grt'
+aff907a kata 5.readme
+de1a37d kata 5
+27ca86d Merge branch 'feat'
+9af63a4 kata 4
+ad038dc kata 3.1
+cc4c77e (my) kata 3
+25f9c1d kat 2
+d96c5db kat 1.1
+1f4f4c9 kat 1.1
+4173f4d kat 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ cat grt.txt
+HELLO
+good morninghey
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git revert d61ae83
+hint: Waiting for your editor to close the file... unix2dos: converting file C:/Users/rajesh/Desktop/tuna/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file C:/Users/rajesh/Desktop/tuna/.git/COMMIT_EDITMSG to Unix format...
+[master 2ed5f6a] Revert "grt update"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git log --oneline
+2ed5f6a (HEAD -> master) Revert "grt update"
+d61ae83 grt update
+57c9229 ignore
+55eedfa (grt) Merge branch 'grt'
+aff907a kata 5.readme
+de1a37d kata 5
+27ca86d Merge branch 'feat'
+9af63a4 kata 4
+ad038dc kata 3.1
+cc4c77e (my) kata 3
+25f9c1d kat 2
+d96c5db kat 1.1
+1f4f4c9 kat 1.1
+4173f4d kat 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ cat grt.txt
+HELLO
+good morning
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ ls
+README.md  file.txt  file1  file2.txt  fo.s  foo.s  grt.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git log --oneline
+2ed5f6a (HEAD -> master) Revert "grt update"
+d61ae83 grt update
+57c9229 ignore
+55eedfa (grt) Merge branch 'grt'
+aff907a kata 5.readme
+de1a37d kata 5
+27ca86d Merge branch 'feat'
+9af63a4 kata 4
+ad038dc kata 3.1
+cc4c77e (my) kata 3
+25f9c1d kat 2
+d96c5db kat 1.1
+1f4f4c9 kat 1.1
+4173f4d kat 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ code .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git revert 2ed5f6a
+hint: Waiting for your editor to close the file... unix2dos: converting file C:/Users/rajesh/Desktop/tuna/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file C:/Users/rajesh/Desktop/tuna/.git/COMMIT_EDITMSG to Unix format...
+[master 885942e] Revert "Revert "grt update""
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git log --oneline
+885942e (HEAD -> master) Revert "Revert "grt update""
+2ed5f6a Revert "grt update"
+d61ae83 grt update
+57c9229 ignore
+55eedfa (grt) Merge branch 'grt'
+aff907a kata 5.readme
+de1a37d kata 5
+27ca86d Merge branch 'feat'
+9af63a4 kata 4
+ad038dc kata 3.1
+cc4c77e (my) kata 3
+25f9c1d kat 2
+d96c5db kat 1.1
+1f4f4c9 kat 1.1
+4173f4d kat 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ ls
+README.md  file.txt  file1  file2.txt  fo.s  foo.s  grt.txt
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ cat grt.txt
+HELLO
+good morninghey
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/Desktop/tuna (master)
+$ git show 2ed5f6a
+commit 2ed5f6a4a5f5edecd8adefe94a0c8aa4f5ec7454
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sat Nov 12 15:58:41 2022 +0530
+
+    Revert "grt update"
+
+    This reverts commit d61ae834d9b49f7ff8a1c31c78ca70095a52a1f0.
+
+diff --git a/grt.txt b/grt.txt
+index 63269ad..b861e9b 100644
+--- a/grt.txt
++++ b/grt.txt
+@@ -1,2 +1,2 @@
+ HELLO
+-good morninghey
++good morning
+\ No newline at end of file
