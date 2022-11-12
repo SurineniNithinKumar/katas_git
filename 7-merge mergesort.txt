@@ -1,0 +1,66 @@
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git branch temp1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git branch temp2
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git switch temp1
+Switched to branch 'temp1'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (temp1)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (temp1)
+$ git commit -m"7th kata 1"
+[temp1 dbb7cc1] 7th kata 1
+ 1 file changed, 2 insertions(+)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (temp1)
+$ git switch temp2
+Switched to branch 'temp2'
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (temp2)
+$ git add .
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (temp2)
+$ git commit -m"7th kata 2"
+[temp2 ccad72c] 7th kata 2
+ 1 file changed, 2 insertions(+)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (temp2)
+$ git merge temp1
+Auto-merging contents
+CONFLICT (content): Merge conflict in contents
+Automatic merge failed; fix conflicts and then commit the result.
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (temp2|MERGING)
+$ git mergetool --tool=vimdiff
+Merging:
+contents
+
+Normal merge conflict for 'contents':
+  {local}: modified file
+  {remote}: modified file
+4 files to edit
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (temp2|MERGING)
+$ git status
+On branch temp2
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   contents
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        contents.orig
+
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (temp2|MERGING)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (temp2|MERGING)
+$ git commit -m"done merging"
+[temp2 37e77f4] done merging
