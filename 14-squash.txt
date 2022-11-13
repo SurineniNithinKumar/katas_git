@@ -1,0 +1,124 @@
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph --all
+*   37e77f4 (HEAD -> master, temp2, greeting) done merging
+|\
+| * dbb7cc1 (temp1) 7th kata 1
+* | ccad72c 7th kata 2
+|/
+* a2db734 example for merge conflict
+*   1d0e989 Merge branch 'greeting'
+|\
+| * 0c8e7a3 3 way merge 4
+* | 3eb14e6 3 way merge 7
+|/
+* 65571f0 fast forward merge 5
+* 2b2670e basic branching 14
+| * e23c306 (my) basic branching 10
+|/
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph --branches
+*   37e77f4 (HEAD -> master, temp2, greeting) done merging
+|\
+| * dbb7cc1 (temp1) 7th kata 1
+* | ccad72c 7th kata 2
+|/
+* a2db734 example for merge conflict
+*   1d0e989 Merge branch 'greeting'
+|\
+| * 0c8e7a3 3 way merge 4
+* | 3eb14e6 3 way merge 7
+|/
+* 65571f0 fast forward merge 5
+* 2b2670e basic branching 14
+| * e23c306 (my) basic branching 10
+|/
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git rebase -i b148332
+hint: Waiting for your editor to close the file... unix2dos: converting file C:/Users/rajesh/Desktop/intern/.git/rebase-merge/git-rebase-todo to DOS format...
+dos2unix: converting file C:/Users/rajesh/Desktop/intern/.git/rebase-merge/git-rebase-todo to Unix format...
+Auto-merging contents
+CONFLICT (content): Merge conflict in contents
+error: could not apply dbb7cc1... 7th kata 1
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply dbb7cc1... 7th kata 1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master|REBASE 10/10)
+$ git rebase --skip
+Successfully rebased and updated refs/heads/master.
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git rebase -i 35e154d
+hint: Waiting for your editor to close the file... unix2dos: converting file C:/Users/rajesh/Desktop/intern/.git/rebase-merge/git-rebase-todo to DOS format...
+dos2unix: converting file C:/Users/rajesh/Desktop/intern/.git/rebase-merge/git-rebase-todo to Unix format...
+hint: Waiting for your editor to close the file... unix2dos: converting file C:/Users/rajesh/Desktop/intern/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file C:/Users/rajesh/Desktop/intern/.git/COMMIT_EDITMSG to Unix format...
+[detached HEAD 57af9a9] basic branching 14
+ Date: Sat Nov 12 11:02:48 2022 +0530
+ 4 files changed, 14 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 contents
+ create mode 100644 file2
+ create mode 100644 grt
+Successfully rebased and updated refs/heads/master.
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph --branches
+* 57af9a9 (HEAD -> master) basic branching 14
+| *   37e77f4 (temp2, greeting) done merging
+| |\
+| | * dbb7cc1 (temp1) 7th kata 1
+| * | ccad72c 7th kata 2
+| |/
+| * a2db734 example for merge conflict
+| *   1d0e989 Merge branch 'greeting'
+| |\
+| | * 0c8e7a3 3 way merge 4
+| * | 3eb14e6 3 way merge 7
+| |/
+| * 65571f0 fast forward merge 5
+| * 2b2670e basic branching 14
+|/
+| * e23c306 (my) basic branching 10
+|/
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/intern (master)
+$ git log --oneline --graph --all
+* 57af9a9 (HEAD -> master) basic branching 14
+| *   37e77f4 (temp2, greeting) done merging
+| |\
+| | * dbb7cc1 (temp1) 7th kata 1
+| * | ccad72c 7th kata 2
+| |/
+| * a2db734 example for merge conflict
+| *   1d0e989 Merge branch 'greeting'
+| |\
+| | * 0c8e7a3 3 way merge 4
+| * | 3eb14e6 3 way merge 7
+| |/
+| * 65571f0 fast forward merge 5
+| * 2b2670e basic branching 14
+|/
+| * e23c306 (my) basic branching 10
+|/
+* 35e154d basic staging line 15
+* b13cf7a basic commits line 16
+* 9c47633 basic commits line 14
+* b148332 basic commits line 7
