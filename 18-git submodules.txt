@@ -1,0 +1,114 @@
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ touch.html
+bash: touch.html: command not found
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ touch tug.html
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ touch destroyer.html
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ touch frigate.html
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ git commit -m'suurface fleet"
+> ^C
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ git commit -m'suurface fleet'
+[master (root-commit) 603fa7b] suurface fleet
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 destroyer.html
+ create mode 100644 frigate.html
+ create mode 100644 tug.html
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ git log --oneline
+603fa7b (HEAD -> master) suurface fleet
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ mkdir submarines
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ ls
+destroyer.html  frigate.html  submarines/  tug.html
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ cd sub*
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface/submarines (master)
+$ ls
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface/submarines (master)
+$ git init
+Initialized empty Git repository in C:/Users/rajesh/Desktop/surface/submarines/.git/
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface/submarines (master)
+$ touch nuclear.html
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface/submarines (master)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface/submarines (master)
+$ git commit -m'sub add'
+[master (root-commit) 0508e48] sub add
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 nuclear.html
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface/submarines (master)
+$ cd ..
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ git submodule add ./submarines
+Adding existing repo at 'submarines' to the index
+warning: in the working copy of '.gitmodules', LF will be replaced by CRLF the next time Git touches it
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitmodules
+        new file:   submarines
+
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ git add .
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ git commit -m'add submodule submari'
+[master 66820ab] add submodule submari
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitmodules
+ create mode 160000 submarines
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ git log --oneline
+66820ab (HEAD -> master) add submodule submari
+603fa7b suurface fleet
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ source setup.sh
+bash: setup.sh: No such file or directory
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ ls
+destroyer.html  frigate.html  submarines/  tug.html
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ cd submarines
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface/submarines (master)
+$ ls
+nuclear.html
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface/submarines (master)
+$ cd ..
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/surface (master)
+$ ls
+destroyer.html  frigate.html  submarines/  tug.html
