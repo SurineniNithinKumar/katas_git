@@ -1,0 +1,88 @@
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git tag v1.0
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git tag
+list
+v1.0
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git tag -a v1.1 -m"tag for release ver 1.1"
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git tag
+list
+v1.0
+v1.1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git show list
+commit 43831f892c30b3c1dacbd8276fe696c0e2971124 (HEAD -> master, tag: v1.1, tag: v1.0, tag: list)
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sun Nov 13 14:40:31 2022 +0530
+
+    fil1
+
+diff --git a/.fil1.txt b/.fil1.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/fil1.txt b/fil1.txt
+new file mode 100644
+index 0000000..e69de29
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git show v1.0
+commit 43831f892c30b3c1dacbd8276fe696c0e2971124 (HEAD -> master, tag: v1.1, tag: v1.0, tag: list)
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sun Nov 13 14:40:31 2022 +0530
+
+    fil1
+
+diff --git a/.fil1.txt b/.fil1.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/fil1.txt b/fil1.txt
+new file mode 100644
+index 0000000..e69de29
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git show v1.1
+tag v1.1
+Tagger: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sun Nov 13 15:03:27 2022 +0530
+
+tag for release ver 1.1
+
+commit 43831f892c30b3c1dacbd8276fe696c0e2971124 (HEAD -> master, tag: v1.1, tag: v1.0, tag: list)
+Author: nithin kumar <nithin.surineni@zemosolabs.com>
+Date:   Sun Nov 13 14:40:31 2022 +0530
+
+    fil1
+
+diff --git a/.fil1.txt b/.fil1.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/fil1.txt b/fil1.txt
+new file mode 100644
+index 0000000..e69de29
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git tag
+list
+v1.0
+v1.1
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git tag -d list
+Deleted tag 'list' (was 43831f8)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git tag -d v1.0
+Deleted tag 'v1.0' (was 43831f8)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git tag -d v1.1
+Deleted tag 'v1.1' (was ef008e1)
+
+rajesh@DESKTOP-VOG5JCE MINGW64 ~/desktop/tuna (master)
+$ git tag
